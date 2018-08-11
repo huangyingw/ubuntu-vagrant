@@ -1,0 +1,21 @@
+[remote "rgl"]
+    url = git@github.com:rgl/ubuntu-vagrant.git
+    fetch = +refs/heads/*:refs/remotes/rgl/*
+[remote "github"]
+    url = git@github.com:huangyingw/ubuntu-vagrant.git
+    fetch = +refs/heads/*:refs/remotes/github/*
+[push]
+    remote = github
+[gsync]
+    remote = rgl
+    branch = master
+[merge]
+	allow = true
+[branch "dev"]
+    remote = github
+    merge = refs/heads/dev
+[branch "master"]
+    remote = rgl
+    merge = refs/heads/master
+[commit]
+	message = n
